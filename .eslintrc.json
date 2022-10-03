@@ -8,8 +8,7 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "plugin:@typescript-eslint/recommended"
   ],
   "overrides": [],
   "parser": "@typescript-eslint/parser",
@@ -20,20 +19,58 @@
   "plugins": [
     "react",
     "react-hooks",
-    "@typescript-eslint",
-    "prettier"
+    "@typescript-eslint"
   ],
   "rules": {
-    "rules": {
-      "react/react-in-jsx-scope": 0,
-      "camelcase": 2,
-      "spaced-comment": 2,
-      "quotes": [
-        2,
-        "double"
-      ],
-      "no-duplicate-imports": 2
-    }
+    "react/react-in-jsx-scope": 0,
+    "arrow-body-style": [
+      1,
+      "as-needed"
+    ],
+    "react/self-closing-comp": [
+      2,
+      {
+        "component": true,
+        "html": true
+      }
+    ],
+    "spaced-comment": 2,
+    "quotes": [
+      2,
+      "single"
+    ],
+    "no-duplicate-imports": 2,
+    "no-console": 1,
+    "semi": 2,
+    "no-multi-spaces": 2,
+    "@typescript-eslint/consistent-type-imports": [ // For only typescript
+      2,
+      {
+        "prefer": "type-imports"
+      }
+    ],
+    "react-hooks/rules-of-hooks": 2,
+    "react-hooks/exhaustive-deps": 1,
+    "object-curly-spacing": [
+      2,
+      "always"
+    ],
+    "object-curly-newline": [
+      2,
+      {
+        "ObjectExpression": "always",
+        "ObjectPattern": {
+          "multiline": true,
+          "minProperties": 3
+        },
+        "ImportDeclaration": "never",
+        "ExportDeclaration": {
+          "multiline": true,
+          "minProperties": 3
+        }
+      }
+    ],
+    "space-before-blocks": 2
   },
   "settings": {
     "import/resolver": {
